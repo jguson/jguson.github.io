@@ -36,7 +36,7 @@ Global Styles and UI Components
 
 footer {
     background: url(/images/footer-palmtrees.png);
-    height: 35vh;
+    height: 40vh;
     justify-content: center;
     align-items: center;
     text-align: center;
@@ -145,7 +145,7 @@ Page-Specific
 
 .hero {
     background: url(/images/Hero-hawaii.png);
-    height: 45vh;
+    height: 75vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -168,7 +168,7 @@ Page-Specific
 
 .portfoliohero {
     background: url(/images/portfoliohero.png);
-    height: 45vh;
+    height: 75vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -181,26 +181,28 @@ Page-Specific
     /*Card Specifics */
 
     .card {
-        height: 575px;
-        /* Set a fixed height for all cards */
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        /* Align items within the card body */
+        display: flex; /* Use flexbox for the card itself */
+        flex-direction: column; /* Stack items vertically */
+        height: 100%; /* Allow cards to fill available height */
     }
-
-    .card-body {
-        display: flex;
-        flex-direction: column;
-        flex-grow: 1;
-        /* Take up remaining space */
-    }
-
+    
     .card-img-top {
-        object-fit: cover;
-        /* Ensures images cover the space properly */
-        max-height: 500px;
-        /* Set a maximum height for images */
-        width: 100%;
-        /* Ensure images take the full width of the container */
+        width: 100%; /* Ensure the image takes the full width of the card */
+        height: auto; /* Maintain the aspect ratio of the image */
+        max-height: 200px; /* Set a maximum height for the image */
+        object-fit: cover; /* Crops the image while preserving aspect ratio */
+    }
+    
+    .card-body {
+        flex-grow: 1; /* Ensure the card body takes the remaining space */
+        display: flex;
+        flex-direction: column; /* Stack items vertically */
+        justify-content: space-between; /* Space between elements */
+    }
+    
+    .col {
+        display: flex; /* Adds flexbox to column */
+        flex: 1; /* Allows all columns to grow equally */
+        margin: 10px; /* Margins around columns for spacing */
+        height: 100%; /* Make sure columns are all the same height */
     }
