@@ -35,18 +35,24 @@ Global Styles and UI Components
 
 
 footer {
-    /* Change footer background color */
-    background-color: var(--bs-primary);
-    /* Optional: Change footer text color to white using variable */
-    color: var(--bs-white);
-    /* Optional: Center footer elements */
+    background: url(/images/footer-palmtrees.png);
+    height: 35vh;
+    justify-content: center;
+    align-items: center;
     text-align: center;
+    /* Centers text horizontally */
+    flex-direction: column;
+
+    /* Aligns text in a vertical order */
+    a {
+        color: #000;
+    }
 }
 
 footer .footer-social {
     /* Optional: Change size of footer icon */
-    width:24px;
-    margin:.5rem
+    width: 20px;
+    margin: .5rem
 }
 
 .btn-primary {
@@ -62,21 +68,18 @@ footer .footer-social {
     background-color: var(--secondary-color);
     color: var(#000);
     border: var(--bs-primary);
-
-
 }
 
-.btn-outline-primary{
+.btn-outline-primary {
     color: var(--bs-primary);
     /* Optional: Change primary button background color to primary color */
-    background-color: #FFF var(--primary-color)
-    border: var(--bs-primary);
+    background-color: #FFF var(--primary-color) border var(--bs-primary);
 }
 
-.btn-outline-primary:hover{
+.btn-outline-primary:hover {
     /* Optional: Change primary button background color to primary color */
     background-color: #1F487E
-    /* Optional: Remove primary button outline */
+        /* Optional: Remove primary button outline */
 }
 
 /********************************
@@ -91,7 +94,11 @@ h6 {
     /* Optional: Add letter spacing to all headings */
     letter-spacing: -0.05rem;
     /* Optional: Adjust font-weight to all headings */
-    font-weight: 600;
+    font-weight: 550;
+}
+
+h1 {
+    letter-spacing: 4px
 }
 
 h2 {
@@ -124,6 +131,7 @@ h2 {
 
 /* Small devices (landscape phones, 576px and up) */
 @media (min-width: 576px) {
+
     /* Optional: Customize responsive style for display-1 on small devices and larger */
     .display-1 {
         font-size: 4rem;
@@ -134,39 +142,65 @@ h2 {
 Page-Specific
 **********************************/
 /* PAGE: Home */
-.hero.home {
-    /* Add a background image for the hero section */
-    background: url(/images/Hero\ img-\ hawaii.png)
-        
-    * Adjust image size to cover the entire section */
-    background-size: cover;
 
-    /* Center the background image */
-    background-position: center;
-
-    /* Optional: Color text white */
-    color: var(--bs-white);
-
-    /* Optional: Add a full-height hero section */
-    height: 75vh;
-    /* Optional: Add necessary props to center the text in the middle of the hero */
+.hero {
+    background: url(/images/Hero-hawaii.png);
+    height: 45vh;
     display: flex;
-    align-items: center;
     justify-content: center;
+    align-items: center;
+    text-align: center;
+    /* Centers text horizontally */
+    flex-direction: column;
+    /* Aligns text in a vertical order */
 }
 
-#about-me {
-    /* Optional: Add a background image for the hero section */
-    background: url(/images/Hero\ img-\ hawaii.png);
+.portfolio {
+    background-color: #1F487E;
 
-    /* Optional: Make the image cover the entire section */
-    background-size: cover;
-
-    /* Optional: Color text white */
-    color: var(--bs-white);
 }
 
-#projects a {
-    /* Optional: Remove underline on project card links */
-    text-decoration: none;
+.row {
+    background-color: #829CBC;
+    padding: 20px;
+    border-radius: 16px;
 }
+
+.portfoliohero {
+    background: url(/images/portfoliohero.png);
+    height: 45vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    /* Centers text horizontally */
+    flex-direction: column;
+    /* Arranges text vertically */
+
+    /***********************
+    /*Card Specifics */
+
+    .card {
+        height: 575px;
+        /* Set a fixed height for all cards */
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        /* Align items within the card body */
+    }
+
+    .card-body {
+        display: flex;
+        flex-direction: column;
+        flex-grow: 1;
+        /* Take up remaining space */
+    }
+
+    .card-img-top {
+        object-fit: cover;
+        /* Ensures images cover the space properly */
+        max-height: 500px;
+        /* Set a maximum height for images */
+        width: 100%;
+        /* Ensure images take the full width of the container */
+    }
