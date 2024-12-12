@@ -145,7 +145,7 @@ Page-Specific
 
 .hero {
     background: url(/images/Hero-hawaii.png);
-    height: 75vh;
+    height: 60vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -168,7 +168,7 @@ Page-Specific
 
 .portfoliohero {
     background: url(/images/portfoliohero.png);
-    height: 75vh;
+    height: 60vh;
     display: flex;
     justify-content: center;
     align-items: center;
